@@ -23,7 +23,7 @@ passed to a spell or diction checker
 
 %prep
 %setup
-%patch
+%patch0
 
 %build
 %{__make} detex man-page prefix="%{_prefix}" CFLAGS="%{optflags} -DNO_MALLOC_DECL"
@@ -44,5 +44,7 @@ passed to a spell or diction checker
 %{_bindir}/detex
 
 %changelog
+* Sun Oct 13 2013 Shaun Brady <sbrady@osc.edu> - 2.8-1
+- RHEL6 needs patchN
 * Tue Apr 21 2009 Geerd-Dietger Hoffmann <ribalba@gmail.com> - 2.8-1
 - Initial package.
